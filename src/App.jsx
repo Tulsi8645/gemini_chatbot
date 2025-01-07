@@ -24,7 +24,7 @@ const App = () => {
     if (!msg) return;
 
     setIsGenerating(true); // Start loading
-    const genAI = new GoogleGenerativeAI("AIzaSyBMsipETuFtEbykNNRxRD_zSX-cIi2r0g4");
+    const genAI = new GoogleGenerativeAI("your_api_key");
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     
     const newMessages = [...messages, { type: "userMsg", text: msg }];
